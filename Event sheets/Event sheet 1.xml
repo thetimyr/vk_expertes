@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <comment>Для работы с друзьями и стеной нужно в настройках приложения ВК :  Права доступа:&#x09;Запрашивать доступ к: доступ к друзьям, доступ к стене</comment>
+        <comment>Когда приложение инициализируется вконтакте, мы получаем массив данных о пользователе запустившим приложение, далее мы эти данные записываем в массив и используем например для вывода в текстовое поле out</comment>
+        <event-block sid="1602601225650919">
+            <conditions>
+                <condition id="18" name="Is Ready" sid="382468199137516" type="vkontakte" />
+                <condition id="-4" name="Trigger once while true" sid="2343853994506913" type="System" />
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="124999022288289" type="curr_user_data">
+                    <param id="0" name="JSON">vkontakte.OwnDataJsonArr</param>
+                </action>
+                <action id="0" name="Set text" sid="8511499015581959" type="out">
+                    <param id="0" name="Text">&quot;id: &quot; &amp;  curr_user_data.At(0,0)</param>
+                </action>
+                <action id="1" name="Append text" sid="6169081332420134" type="out">
+                    <param id="0" name="Text">newline &amp; &quot;имя: &quot; &amp;  curr_user_data.At(0,1)</param>
+                </action>
+                <action id="1" name="Append text" sid="8658165973978459" type="out">
+                    <param id="0" name="Text">newline &amp; &quot;фамилия: &quot; &amp;  curr_user_data.At(0,2)</param>
+                </action>
+                <action id="1" name="Append text" sid="3405179276446786" type="out">
+                    <param id="0" name="Text">newline &amp; &quot;пол: &quot; &amp;  curr_user_data.At(0,3)</param>
+                </action>
+                <action id="1" name="Append text" sid="7774141319898089" type="out">
+                    <param id="0" name="Text">newline &amp; &quot;дата рождения: &quot; &amp;  curr_user_data.At(0,4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Это действие установит новый заголовок</comment>
+        <event-block sid="1325938233891145">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9874652272024331" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">button_1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set Title" sid="8610896862773253" type="vkontakte">
+                    <param id="0" name="title">&quot;* Привет в тайтл вкладки праузера :) *&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Это действие покажет окно приглашение друзей</comment>
+        <event-block sid="2458350967744188">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="356574589574392" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">button_2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Show Invite Box" sid="4652127451606736" type="vkontakte" />
+            </actions>
+        </event-block>
+        <comment>Получить массив друзей с параметрами</comment>
+        <event-block sid="5930502367772675">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3582119757361731" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">button_3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Friends Get" sid="6914094268447747" type="vkontakte">
+                    <param id="0" name="name_case">0</param>
+                    <param id="1" name="count">&quot;10&quot;</param>
+                    <param id="2" name="offset">&quot;3&quot;</param>
+                    <param id="3" name="order">0</param>
+                    <param id="4" name="fields">&quot;uid, first_name, last_name, sex, bdate, city, country, timezone, photo, photo_medium, photo_big&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Это событие произойдет, когда список друзей вызванный действием ^^ выше выполнится. Данные о друзьях помещаем массив, а оттуда выводим в тектовое поле OUT</comment>
+        <event-block sid="7982007534616475">
+            <conditions>
+                <condition id="8" name="On Friends List Loaded" sid="5366717932488897" type="vkontakte" />
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="5174616080260989" type="friends_data">
+                    <param id="0" name="JSON">vkontakte.FriensDataJsonArr</param>
+                </action>
+                <action id="0" name="Set text" sid="9712674862669169" type="out">
+                    <param id="0" name="Text">&quot;Друзья:&quot; &amp; newline</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2831053655639641">
+                    <conditions>
+                        <condition id="-10" name="For" sid="1723279455110564" type="System">
+                            <param id="0" name="Name">&quot;loop_friends&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">friends_data.Width-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="1065645857285204" type="out">
+                            <param id="0" name="Text">friends_data.At(LoopIndex(&quot;loop_friends&quot;),0) &amp; &quot; &quot; &amp; friends_data.At(LoopIndex(&quot;loop_friends&quot;),1) &amp; &quot; &quot; &amp; friends_data.At(LoopIndex(&quot;loop_friends&quot;),2) &amp; &quot; &quot; &amp; friends_data.At(LoopIndex(&quot;loop_friends&quot;),3)  &amp; &quot; &quot; &amp; friends_data.At(LoopIndex(&quot;loop_friends&quot;),4) &amp; newline</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Показать окно оплаты голосами с количеством голосов: 5 (все действия с голосами будут требовать серверной части приложения)</comment>
+        <event-block sid="4655434816253087">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6540176804913483" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">button_4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Show Order Box" sid="4882073607706031" type="vkontakte">
+                    <param id="0" name="count">&quot;5&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Действие публикует на стену пользователю</comment>
+        <event-block sid="5968112721051295">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="186982828884521" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">button_5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Опубликовать на стене" sid="5084926969955145" type="vkontakte">
+                    <param id="0" name="id_owner">&quot;&quot;</param>
+                    <param id="1" name="message">&quot;Тестовое сообщение на стену&quot;</param>
+                    <param id="2" name="attachments">&quot;&quot;</param>
+                    <param id="3" name="lat">&quot;&quot;</param>
+                    <param id="4" name="long">&quot;&quot;</param>
+                    <param id="5" name="place_id">&quot;&quot;</param>
+                    <param id="6" name="services">&quot;&quot;</param>
+                    <param id="7" name="from_group">&quot;&quot;</param>
+                    <param id="8" name="signed">&quot;&quot;</param>
+                    <param id="9" name="friends_only">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

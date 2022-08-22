@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>1yu48pbghyhc5</unique-id>
+    <saved-with-version>19200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="AquaBarbus" id="vkontakte" version="1.399999976">vkontakte</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">iPhone only</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="_sys">
+            <object-type name="vkontakte" sid="8497505529109613">
+                <plugin id="vkontakte" />
+            </object-type>
+            <object-type name="Mouse" sid="7142184632794718">
+                <plugin id="Mouse" />
+            </object-type>
+        </object-folder>
+        <object-folder name="other">
+            <object-type global="1" name="curr_user_data" sid="8652111734882344">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="friends_data" sid="7457314760590077">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="out" sid="1206649974512534">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="buttons">
+            <object-type name="button_1" sid="6831362963067959">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="button_2" sid="6886743750816919">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="button_3" sid="1611810796112936">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="button_4" sid="3750707801728132">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="button_5" sid="2344834447446133">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="vkontakte" uid="8">
+            <properties>
+                <app-id></app-id>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="9" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
