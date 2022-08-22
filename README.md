@@ -2,6 +2,6 @@
 ![Hi](https://github.com/thetimyr/vk_expertes/blob/main/Files/1.png?raw=true)
       
 ### //Screenshot
-![illustration](https://github.com/thetimyr/vk_expertes/blob/main/Files/2.png?size=200x422)
+![illustration](https://github.com/thetimyr/vk_expertes/blob/main/Files/2.png?size=200x422&type=album)
       
       
