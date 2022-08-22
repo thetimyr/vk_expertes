@@ -1,2 +1,2 @@
 # vk_expertes
-![Hi](https://github.com/thetimyr/thetimyr/blob/main/Cr4-mUbNwXk.jpg?raw=true)
+![Hi](https://github.com/thetimyr/vk_expertes/Files/1.png?raw=true)
