@@ -1,0 +1,9 @@
+<setting
+	<vk-api=1.131?>
+	<vk-APP=*?>
+	<vk-scroll=*?>
+	<vk-expert=1
+		<public="\VK_API\vkexpert_plagin\expert.js"?>
+		<size="1024">
+	?>
+?>
