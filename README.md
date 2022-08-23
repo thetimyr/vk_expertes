@@ -12,4 +12,5 @@
 - In the new version: the definition of scores (estimated)
 
 ### //instruction
+1. [install](#install)
 #### //install
