@@ -13,7 +13,7 @@
 
 ### //instruction
 1. [install](#install)
--
-- 
+   - WebHosting
+   - Other
 3.
 #### //install
