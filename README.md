@@ -1,5 +1,5 @@
 # VK Experts 
-![Hi]([https://github.com/thetimyr/thetimyr/blob/main/Cr4-mUbNwXk.jpg?raw=true](https://github.com/thetimyr/vk_expertes/blob/main/other/icon.png?raw=true))
+![Hi](https://github.com/thetimyr/vk_expertes/blob/main/other/icon.png?raw=true)
 
 Данный скрипт представляет собой готовый одностраничный PHP-виджет, который **визуально повторяет интерфейс приложения** «VK Эксперты» (VK Experts), при этом подтягивает актуальные данные пользователя из официального **API ВКонтакте** в реальном времени.
 
